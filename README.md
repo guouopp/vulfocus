@@ -1,4 +1,3 @@
-
 <h1 align="center"> Welcome to Vulfocus 🚀 </h1>
 
 Vulfocus 是一个漏洞集成平台，将漏洞环境 docker 镜像，放入即可使用，开箱即用。
@@ -8,13 +7,16 @@ Vulfocus 是一个漏洞集成平台，将漏洞环境 docker 镜像，放入即
   <img src="https://img.shields.io/github/release/fofapro/vulfocus.svg?style=flat-square" />
   <img src="https://img.shields.io/github/release/fofapro/vulfocus.svg?color=blue&label=update&style=flat-square" />
   <img src="https://img.shields.io/github/license/fofapro/vulfocus?style=flat-square" />
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<img src="https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square" />
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 
 在线演示：[http://vulfocus.fofa.so/](http://vulfocus.fofa.so/)
 
 ## 背景
 
-现在阶段网络靶场平台是遍地开花，让人看的眼花缭乱，但商业化产品居多，还有一些类似 dvwa、 sqli-labs这类的开源项目，但是漏洞环境比较固定，使用完一次后就失去其作用。当你需要某个环境的时候，你可能还需要去  https://hub.docker.com/ 官网上找，但每次启动的流程会比较繁琐，因为每个镜像的启动命令可能都不太一样，而且一但环境多了很不好管理，需要启动同一个框架两个不同版本的漏洞环境的时候，就需要修改一些端口、配置文件等等很麻烦，甚至很多场景是不满足的，之前关于漏洞环境镜像使用多的是vulhub，但是作为企业，高校等以及相关的培训，单纯的漏洞环境不一定能满足使用的需求，所以我们基于当下的一些靶场项目做出了小小的改进来符合我们一些需求，比如，增加flag的形式，积分的形式，来满足一些考核与验证的需求，于是 Vulfocus 就诞生了。
+漏洞靶场是目前每个安全人员以及想学习信息安全的人必备的东西，但目前商业化产品居多，还有一些类似 dvwa、 sqli-labs 这类的开源项目，但是漏洞环境比较固定，使用完一次后就失去其作用。搭建的成本过高，每次启动的流程会比较繁琐，甚至很多场景是不满足的，之前关于漏洞环境镜像使用多的是 vulhub，但是作为企业、高校等以及相关的培训，单纯的漏洞环境不一定能满足使用的需求，所以我们基于当下的一些靶场项目做出了小小的改进来符合我们的一些需求，比如增加 flag 的形式，来满足一些考核与验证的需求，可以对我们内部人员能力进行考核，于是 Vulfocus 就诞生了。
 
 ## 认识 Vulfocus
 
@@ -39,7 +41,9 @@ Vulfocus 的 docker 仓库 [https://hub.docker.com/u/vulfocus](https://hub.docke
 
 ### ✨ 使用
 
-![](./imgs/register&login.gif)
+![](./imgs/register.gif)
+
+![](./imgs/login.gif)
 
 1. 安装完成后，访问80端口
 
@@ -51,19 +55,17 @@ Vulfocus 的 docker 仓库 [https://hub.docker.com/u/vulfocus](https://hub.docke
 
    (1)、在进行管理中，添加功能
 
-   ![](./imgs/upload_image_pull.gif)
-       
-   ![](./imgs/upload_image_file.gif)
+   ![](./imgs/image.gif)
 
    (2)、分别填入漏洞名称、镜像、rank、描述
 
    - 镜像又分为文件和文本
-     - 文本：是从 [https://hub.docker.com/u/vulfocus](https://hub.docker.com/u/vulfocus) 官网拉取镜像。内容为如： `vulfocus/webmin-cve_2019_15107` 。 
+  - 文本：是从 [https://hub.docker.com/u/vulfocus](https://hub.docker.com/u/vulfocus) 官网拉取镜像。内容为如： `vulfocus/webmin-cve_2019_15107` 。
      - 文件：本地漏洞镜像打成tar包的形式进行上传。
-
+   
 4. 下载完成后点击启动即可。
 
-![](./imgs/tp5_rce.gif)
+![](./imgs/flag.gif)
 
 5. 镜像启动后，会在环境里写入一个 flag （默认 flag 会写入 **/tmp/** 下），读取到 flag 后填入 flag 窗口，镜像会自动关闭，如需重新启动，需强刷一下，然后再次点击启动即可。
 
@@ -72,24 +74,65 @@ Vulfocus 的 docker 仓库 [https://hub.docker.com/u/vulfocus](https://hub.docke
 
 初期 Vulfocus 的漏洞镜像会较少，可能无法满足你的需求，所以非常期望大家来一起维护 Vulfocus，当你发现你的一些漏洞环境在 Vulfocus 中找不到时，可以提交供大家使用。一个有问题的环境可能会影响到使用者的情绪。因此我们对社区提交的漏洞环境会进行审核。贡献者在提交漏洞环境的时候，可提供相应的复现工具或流程，加速环境的审核。
 
-### 方式
+[镜像贡献](./images/CONTRIBUTION.md)
 
-- 提交 dockerfile
-- 也可以上传到 [https://hub.docker.com](https://hub.docker.com) ，把镜像的名称提供给我们，镜像名称的命令规则如：框架（CMS、组件）-漏洞编号，例如：`vulfocus/spring-cve_2017_8046`
+## FAQ
 
+**镜像启动后立即访问地址失败？**
 
-- 例：
-    vulfocus/webmin-cve_2019_15107
-    vulfocus/spring-cve_2017_8046
+1. 根据镜像的大小，启动时间会有不同的延迟，一般在几秒以内。
 
-### 流程
+**提交完 flag 后会有卡住？**
 
-- fork [vulfocus](https://github.com/fofapro/vulfocus) 至个人项目，然后 clone 项目。
+1. 在提交完正确flag后，会进行镜像关闭的动作，所以会有几秒的延迟。
 
-- 提交 dockerfile 至 [images](./images/) 文件夹中创建漏洞名称，然后将 dockerfile 放置该目录下，最后将环境信息提交至 [`images/README.md`](./images/README.md)。
-- 贡献者以 PR 的方式向 github Vulfocus 社区仓库内提交 漏洞环境， 提交位置: [https://github.com/fofapro/vulfocus/dockerfile/](https://github.com/fofapro/vulfocus/dockerfile/)
-- 我们会根据提供的 dockerfile，确定镜像环境是否可用。
-- 审核完成后镜像会放进 https://hub.docker.com/u/vulfocus 仓库供大家使用。
+**拉取镜像时一直卡在哪里**
+
+1. 由于网络延迟或镜像太大的原因时间会长一点。
+
+2. 镜像名称填错，也会卡在哪里，建议强刷一下。
+
+**Centos 无权限操作Docker**
+
+[centos7 docker版本应用无法添加镜像](https://github.com/fofapro/vulfocus/issues/6)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people :
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/anonymity3712"><img src="https://avatars0.githubusercontent.com/u/40228178?v=4" width="100px;" alt=""/><br /><sub><b>anonymity3712</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/issues?q=author%3Aanonymity3712" title="Bug reports">🐛</a> <a href="#blog-anonymity3712" title="Blogposts">📝</a></td>
+    <td align="center"><a href="https://github.com/TC130"><img src="https://avatars2.githubusercontent.com/u/8563648?v=4" width="100px;" alt=""/><br /><sub><b>TC130</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/issues?q=author%3ATC130" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/hackwuli"><img src="https://avatars1.githubusercontent.com/u/47844992?v=4" width="100px;" alt=""/><br /><sub><b>hackwuli</b></sub></a><br /><a href="#question-hackwuli" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://github.com/lxyevil"><img src="https://avatars3.githubusercontent.com/u/17840712?v=4" width="100px;" alt=""/><br /><sub><b>lxyevil</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/commits?author=lxyevil" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/littleheary"><img src="https://avatars3.githubusercontent.com/u/26987382?v=4" width="100px;" alt=""/><br /><sub><b>littleheary</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/pulls?q=is%3Apr+reviewed-by%3Alittleheary" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/q2118cs"><img src="https://avatars0.githubusercontent.com/u/18305067?v=4" width="100px;" alt=""/><br /><sub><b>Rai Sun</b></sub></a><br /><a href="#ideas-q2118cs" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/luobei-Dynamic"><img src="https://avatars2.githubusercontent.com/u/13211734?v=4" width="100px;" alt=""/><br /><sub><b>luobei-Dynamic</b></sub></a><br /><a href="#ideas-luobei-Dynamic" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/wanglaiqi"><img src="https://avatars3.githubusercontent.com/u/9366714?v=4" width="100px;" alt=""/><br /><sub><b>wanglaiqi</b></sub></a><br /><a href="#ideas-wanglaiqi" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/zhuhongchang1227"><img src="https://avatars2.githubusercontent.com/u/59280688?v=4" width="100px;" alt=""/><br /><sub><b>zhuhongchang1227</b></sub></a><br /><a href="#ideas-zhuhongchang1227" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/daibing125"><img src="https://avatars1.githubusercontent.com/u/49011861?v=4" width="100px;" alt=""/><br /><sub><b>daibing</b></sub></a><br /><a href="#ideas-daibing125" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/zhangfeitao"><img src="https://avatars0.githubusercontent.com/u/10626929?v=4" width="100px;" alt=""/><br /><sub><b>zhangfeitao</b></sub></a><br /><a href="#ideas-zhangfeitao" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/TORRYGUO"><img src="https://avatars0.githubusercontent.com/u/43666746?v=4" width="100px;" alt=""/><br /><sub><b>TORRYGUO</b></sub></a><br /><a href="#ideas-TORRYGUO" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Becivells"><img src="https://avatars2.githubusercontent.com/u/12883127?v=4" width="100px;" alt=""/><br /><sub><b>李大壮</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/commits?author=Becivells" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Vdeem"><img src="https://avatars1.githubusercontent.com/u/24988893?v=4" width="100px;" alt=""/><br /><sub><b>Vdeem</b></sub></a><br /><a href="#blog-Vdeem" title="Blogposts">📝</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/xiajibaxie"><img src="https://avatars2.githubusercontent.com/u/45410321?v=4" width="100px;" alt=""/><br /><sub><b>xiajibaxie</b></sub></a><br /><a href="#blog-xiajibaxie" title="Blogposts">📝</a></td>
+    <td align="center"><a href="https://github.com/Frivolous-scholar"><img src="https://avatars0.githubusercontent.com/u/48624840?v=4" width="100px;" alt=""/><br /><sub><b>Frivolous-scholar</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/commits?author=Frivolous-scholar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/D4ch1au"><img src="https://avatars3.githubusercontent.com/u/46175208?v=4" width="100px;" alt=""/><br /><sub><b>D4ch1au</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/commits?author=D4ch1au" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/M2ayill"><img src="https://avatars2.githubusercontent.com/u/22850233?v=4" width="100px;" alt=""/><br /><sub><b>M2ayill</b></sub></a><br /><a href="https://github.com/fofapro/vulfocus/commits?author=m2ayill" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## 📝 讨论区
 
@@ -101,6 +144,11 @@ GitHub issue: [https://github.com/fofapro/vulfocus/issues](https://github.com/fo
 
 <img src="./imgs/wechat.jpeg" widht="500px" height="500px"  />
 
+
+## 更新日志
+
+[更新日志](./CHANGELOG.md)
+
 ## 致谢
 
 - [Vue Element Admin](https://github.com/PanJiaChen/vue-element-admin)
@@ -109,19 +157,3 @@ GitHub issue: [https://github.com/fofapro/vulfocus/issues](https://github.com/fo
 ## 声明
 
 该项目会收集了当下比较流行的漏洞环境，若有侵权，请联系我们！
-
-## FAQ
-
-镜像启动后立即访问地址失败？
-
-1. 根据镜像的大小，启动时间会有不同的延迟，一般在几秒以内。
-
-提交完 flag 后会有卡住？
-
-1. 在提交完正确flag后，会进行镜像关闭的动作，所以会有几秒的延迟。
-
-拉取镜像时一直卡在哪里
-
-1. 由于网络延迟或镜像太大的原因时间会长一点。
-
-2. 镜像名称填错，也会卡在哪里，建议强刷一下。
