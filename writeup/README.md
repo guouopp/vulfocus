@@ -30,3 +30,21 @@
 
 [ThinkPHP_2.X任意代码执行](./ThinkPHP_2.X任意代码执行/ThinkPHP2.X任意代码执行.md)  by [anonymity3712](https://github.com/Frivolous-scholar)
 
+[Thinkphp5.0.23远程代码执行](./Thinkphp5.0.23远程代码执行/Thinkphp5.0.23远程代码执行.md)  by [anonymity3712](https://github.com/Frivolous-scholar)
+
+[seacms-v6.53 命令执行漏洞](./seacms-v6.53%20命令执行漏洞/seacms-v6.53%20命令执行漏洞.md) by [Aa1141415869](https://github.com/Aa1141415869)
+
+[seacms-v6.45 任意代码执行漏洞.md](./seacms-v6.45%20任意代码执行漏洞/seacms-v6.45%20任意代码执行漏洞.md) by [Aa1141415869](https://github.com/Aa1141415869)
+
+[Struts2-008(CVE-2012-0392)](./CVE-2012-0392/Struts2-008(CVE-2012-0392).md)  by [anonymity3712](https://github.com/Frivolous-scholar)
+
+[Struts2-devMode](./Struts2-devMode/Struts2-devMode.md)  by [anonymity3712](https://github.com/Frivolous-scholar)
+
+[PHP文件包含之利用phpinfo](./PHP文件包含之利用phpinfo/PHP文件包含漏洞之利用phpinfo.md)  by [fengyehack](https://github.com/fengyehack)
+
+[CVE-2020-2555](./CVE-2020-2555/CVE-2020-2555.md)  by [xiajibaxie](https://github.com/xiajibaxie)
+
+[Shiro_RememberMe1.2.4反序列化](./Shiro_RememberMe_1.2.4_反序列化/Shiro_RememberMe1.2.4反序列化.md)  by [xiajibaxie](https://github.com/xiajibaxie)
+
+[CVE-2020-2555](./CVE-2020-1956/CVE-2020-1956.md)  by [xiajibaxie](https://github.com/xiajibaxie)
+
