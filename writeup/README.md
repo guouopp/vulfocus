@@ -55,3 +55,10 @@
 [CVE-2018-1273](./CVE-2018-1273/CVE-2018-1273.md)  by [fengyehack](https://github.com/fengyehack)
 
 [CVE-2017-8046](./CVE-2017-8046/CVE-2017-8046.md)  by [fengyehack](https://github.com/fengyehack)
+
+[CVE-2018-1000861](./CVE-2018-1000861/CVE-2018-1000861.md)  by [anonymity3712](https://github.com/Frivolous-scholar)
+
+[CVE-2017-7504](./CVE-2017-7504/CVE-2017-7504.md)  by [Vdeem](https://github.com/Vdeem)
+
+[CVE-2017-1000353](./CVE-2017-1000353/CVE-2017-1000353.md)  by [Vdeem](https://github.com/Vdeem)
+
