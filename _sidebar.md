@@ -53,6 +53,17 @@
    * [struts2-045（CVE-2017-5638）](writeup/struts2-045_xiajibaxie/struts2-045.md)
    * [struts2-055（CVE-2017-7525）](writeup/struts2-055_xiajibaxie/CVE-2017-7525.md)
    * [struts2-053（CVE-2017-12611）](writeup/struts2-053_xiajibaxie/CVE-2017-12611.md)
+   * [海洋cms_V6.53版本代码执行](writeup/海洋cms_V6.53版本代码执行_Frivolous-scholar/海洋cms_V6.53版本代码执行.md)
+   * [海洋cms_V6.45版本代码执行](writeup/海洋cms_V6.45版本代码执行_Frivolous-scholar/海洋cms_V6.45版本代码执行.md)
+   * [Spring_Cloud_Config_Server_目录遍历漏洞_Frivolous-scholar](writeup/Spring_Cloud_Config_Server_目录遍历漏洞_Frivolous-scholar/Spring_Cloud_Config_Server_目录遍历漏洞.md)
+   * [weblogic命令执行 CVE-2020-2551](writeup/weblogic命令执行_CVE-2020-2551_xiajibaxie/CVE-2020-2551.md)
+   * [Jupyter_Notebook_未授权访问漏洞](writeup/Jupyter_Notebook_未授权访问漏洞_xiajibax/JupyterNotebook未授权访问漏洞.md)
+   * [webmin远程命令执行漏洞（CVE-2019-15107）](writeup/webmin远程命令执行漏洞_CVE-2019-15107_hu4wufu/README.md)
+   * [thinkphp_5.0.21命令执行](writeup/thinkphp_5.0.21命令执行_hu4wufu/thinkphp_5.0.21命令执行.md)
+   * [ThinkPHP5远程代码执行漏洞（CNVD-2018-24942）](writeup/ThinkPHP5远程代码执行漏洞_CNVD-2018-24942_hu4wufu/README.md)
+   * [struts2-045（CVE-2017-5638）](writeup/struts2-045_CVE-2017-5638_hu4wufu/README.md)
+   * [struts2-052（CVE-2017-9805）](writeup/struts2-052_CVE-2017-9805_hu4wufu/README.md)
+
 
 * 镜像
 
